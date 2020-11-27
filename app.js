@@ -1,6 +1,6 @@
 const express  = require('express');
 const pdf2html = require('pdf2html');
-const StudentActivitiesLog = require("./models/studentActivitiesLog");
+//const StudentActivitiesLog = require("./models/studentActivitiesLog");
 //const Mycss    = require('./style.css');
 
 const app  = express();
@@ -24,7 +24,7 @@ app.use('/:doc/:hash/:date_connexion/:id_student/:id_contenu',(req,res,next) =>
 		console.log(req.params.date_connexion);
 		console.log(req.params.id_student);
 		console.log(req.params.id_contenu);
-		StudentActivitiesLog.insert(req.params.date_connexion, req.params.id_student, req.params.id_contenu);
+		//StudentActivitiesLog.insert(req.params.date_connexion, req.params.id_student, req.params.id_contenu);
 	}
 	pdf2html.html("documents/"+req.params.doc, (err, html) => {
 	    if (err) 
