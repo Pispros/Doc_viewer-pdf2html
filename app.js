@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 
 let style = "<style>*{ font-size:22px; }  a{ color:#33b5e5 !important; } .annotation{ width:70%;margin-left:12%;text-align:left; } p{ text-align:left; } .page{ padding-bottom: 100px;background-color:white;padding-top:25px;width:70%;margin-left:15%;padding-left:30px;padding-right:30px;-webkit-user-select: none;-moz-user-select: none; -ms-user-select: none;user-select: none; } body{ background-color:#737373;color:black; } .page p:nth-child(2){ text-align:center !important;font-size:26px !important;margin-bottom:45px;font-weight:bold; } ul{ background-color:white;padding:25px; }</style>";
 
-app.use('/:doc/:hash/:date_connexion/:id_student/:id_contenu',(req,res,next) =>
+app.use('/:doc',(req,res,next) =>
 {
 
 	if (
